@@ -26,11 +26,16 @@
                         @endforeach
                     @endif
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" value="true" class="form-check-input" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Lembrar-me</label>
+                <div class="mb-3">
+                    <label for="user" class="form-label">Usuário</label>
+                    <input type="user" name="user" class="form-control" id="user" required>
+                    @if($errors->has('user'))
+                        @foreach($errors->get('user') as $error)
+                            {{ "$error \n" }}
+                        @endforeach
+                    @endif
                 </div>
-                <button type="submit" class="btn btn-primary">Acessar</button>
+                <button type="submit" class="btn btn-primary">Criar</button>
             </form>
         </div>
     </section>

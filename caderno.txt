@@ -1,0 +1,1 @@
+Não será implementada validação de senha do usuário verificando símbolos ou letras maiusculas e minusculas
