@@ -1,0 +1,5 @@
+Não será implementada validação de senha do usuário verificando símbolos ou letras maiusculas e minusculas
+
+fechar logo a branch atual para não misturar diferentes objetivos
+
+implementar o lembrar-me
