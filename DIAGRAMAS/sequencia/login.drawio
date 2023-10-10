@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-10-09T22:50:27.446Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.8.2 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="QzNy3LLDAb6hLLqObnkh" version="21.8.2" type="device">
+<mxfile host="Electron" modified="2023-10-09T22:46:53.755Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.8.2 Chrome/114.0.5735.289 Electron/25.8.1 Safari/537.36" etag="7NX7lgdCXrfyKRATHQd-" version="21.8.2" type="device">
   <diagram name="Página-1" id="pJLuoMO0Q_-Yad9hbXGi">
     <mxGraphModel dx="1418" dy="828" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="G98NZdRWw-0VAVInHorX-1" value="Actor - User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#60a917;strokeColor=#2D7600;fontColor=#ffffff;" parent="1" vertex="1">
           <mxGeometry x="30" y="230" width="60" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-2" value="SEQUÊNCIA DE CADASTRO USUÁRIO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+        <mxCell id="G98NZdRWw-0VAVInHorX-2" value="SEQUÊNCIA DE LOGIN" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
           <mxGeometry x="340" y="10" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;dashPattern=8 8;" parent="1" source="G98NZdRWw-0VAVInHorX-3" edge="1">
@@ -31,7 +31,7 @@
             <mxPoint x="650" y="660" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-25" value="[Existe email informado" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="G98NZdRWw-0VAVInHorX-10" vertex="1" connectable="0">
+        <mxCell id="G98NZdRWw-0VAVInHorX-25" value="[Existe Usuario]" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="G98NZdRWw-0VAVInHorX-10" vertex="1" connectable="0">
           <mxGeometry x="0.2907" y="1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -80,8 +80,8 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-19" value="Envia dados" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="285" y="380" width="90" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-19" value="Envia credênciais" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="270" y="380" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-20" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="100" relative="1" as="geometry">
@@ -90,7 +90,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-21" value="Cria novo usuário" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="G98NZdRWw-0VAVInHorX-21" value="Valida Credênciais" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="480" y="410" width="120" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-22" value="Alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=60;height=20;" parent="1" vertex="1">
@@ -110,7 +110,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-27" value="Retorna false" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+        <mxCell id="G98NZdRWw-0VAVInHorX-27" value="Retorna OK" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="470" y="490" width="90" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-28" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
@@ -120,8 +120,8 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-29" value="retorna false" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="310" y="508" width="90" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-29" value="Autorizar e criar sessão" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="280" y="508" width="150" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-30" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;" parent="1" edge="1">
           <mxGeometry width="100" relative="1" as="geometry">
@@ -130,8 +130,8 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-31" value="Informa que email já existe" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="85" y="528" width="170" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-31" value="Retorna tela de posts" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="100" y="528" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="G98NZdRWw-0VAVInHorX-33" value="" style="edgeStyle=none;orthogonalLoop=1;jettySize=auto;html=1;rounded=0;entryX=-0.004;entryY=0.505;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;dashPattern=8 8;" parent="1" edge="1">
           <mxGeometry width="100" relative="1" as="geometry">
@@ -140,14 +140,14 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-34" value="retorno ok" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="500" y="598" width="80" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-34" value="Retorna null" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="495" y="598" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-35" value="cria sessão e redireciona pra home" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="245" y="598" width="210" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-35" value="Não autoriza" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="285" y="598" width="90" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="G98NZdRWw-0VAVInHorX-36" value="devolve a home" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="95" y="608" width="110" height="30" as="geometry" />
+        <mxCell id="G98NZdRWw-0VAVInHorX-36" value="Retorna form Login e Mensagem" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="50" y="608" width="200" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

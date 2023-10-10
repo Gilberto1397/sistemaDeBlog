@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserFormRequest;
 use App\Http\Service\UserService;
+use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -21,6 +23,7 @@ class UserController extends Controller
 
     public function store(UserFormRequest $request)
     {
-        $saved = $this->userService->store($request);
+        $this->userService->store($request);
+        return redirect()->route('login');
     }
 }

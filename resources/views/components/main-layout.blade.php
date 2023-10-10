@@ -11,6 +11,12 @@
 </head>
 <body style="background-color: #241058">
 
+@isset($message)
+    <div class="w-100 d-flex justify-content-center text-white">
+        <p>{{$message}}</p>
+    </div>
+@endisset
+
 @yield('content')
 
 <script src="{{asset('js/app.js')}}"></script>
