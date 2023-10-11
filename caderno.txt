@@ -1,5 +1,5 @@
 Não será implementada validação de senha do usuário verificando símbolos ou letras maiusculas e minusculas
 
-fechar logo a branch atual para não misturar diferentes objetivos
-
+Login automático após criação de usuário, não implementado
+arrumar mensagem de usuário incorreto
 implementar o lembrar-me

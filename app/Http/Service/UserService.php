@@ -2,13 +2,26 @@
 
 namespace App\Http\Service;
 
+use App\Http\Repository\User\UserRepositoryInterface;
 use App\Http\Requests\UserFormRequest;
+use App\Models\User;
 
 class UserService
 {
-    public function store(UserFormRequest $request)
-    {
+    protected UserRepositoryInterface $userRepository;
 
-        dd($request); // guardar e já iniciar a sessão
+    public function __construct(UserRepositoryInterface $userRepository)
+    {
+        $this->userRepository = $userRepository;
+    }
+
+    /**
+     * @param UserFormRequest $request
+     * @return User
+     */
+    public function store(UserFormRequest $request): User
+    {
+        $user = $this->userRepository->store($request);
+        return $user;
     }
 }

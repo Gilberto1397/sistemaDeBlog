@@ -17,7 +17,8 @@ class LoginController extends Controller
 
     public function create()
     {
-        return view('login.create');
+        $message = session('message');
+        return view('login.create', compact('message'));
     }
 
     public function store(LoginFormRequest $request): RedirectResponse
@@ -26,7 +27,7 @@ class LoginController extends Controller
 
         if (!$authenticated) {
             session()->flash('message', 'Usuário ou senha incorretos!');
-            return redirect()->route('home');
+            return redirect()->route('login');
         }
         return redirect()->route('home');
     }

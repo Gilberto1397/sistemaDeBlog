@@ -19,7 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 })->middleware('auth')->name('home');
 
-Route::get('/login', [LoginController::class, 'create'])->name('login-get');
+Route::get('/login', [LoginController::class, 'create'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login-post');
 
 Route::get('/novo/usuario', [UserController::class, 'create'])->name('new-user-get');
