@@ -11,6 +11,8 @@
 </head>
 <body style="background-color: #241058">
 
+@include('components.nav-bar')
+
 @isset($message)
     <div class="w-100 d-flex justify-content-center text-white">
         <p>{{$message}}</p>
