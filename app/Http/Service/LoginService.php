@@ -26,6 +26,14 @@ class LoginService
             $user->password = $newPassword;
             $user->save();
         }
+
+        session()->remove('userName');
+        session(['userName' => Auth::user()->user]);
+
+        session()->remove('loggedUser');
+        if (!empty($request->remember) && (boolean)$request->remember === true) {
+            session(['loggedUser' => $request->email]);
+        }
         return true;
     }
 }

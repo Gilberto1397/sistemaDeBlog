@@ -14,7 +14,7 @@
 @include('components.nav-bar')
 
 @isset($message)
-    <div class="w-100 d-flex justify-content-center text-white">
+    <div class="w-100 d-flex justify-content-center text-white mt-3">
         <p>{{$message}}</p>
     </div>
 @endisset

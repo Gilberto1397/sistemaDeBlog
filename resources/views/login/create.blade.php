@@ -10,7 +10,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="email" class="form-label">E-mail</label>
-                    <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                    <input type="email" name="email" value="{{$loggedUser}}" class="form-control" id="email" aria-describedby="emailHelp" required>
                     @if($errors->has('email'))
                         @foreach($errors->get('email') as $error)
                             {{ "$error \n" }}
@@ -27,7 +27,7 @@
                     @endif
                 </div>
                 <div class="mb-3 form-check">
-                    <input type="checkbox" value="true" class="form-check-input" id="rememberMe">
+                    <input type="checkbox" name="remember" {{($checked === true ? 'checked' : '')}} value="true" class="form-check-input" id="rememberMe">
                     <label class="form-check-label" for="rememberMe">Lembrar-me</label>
                 </div>
                 <button type="submit" class="btn btn-primary">Acessar</button>

@@ -19,7 +19,18 @@ class LoginController extends Controller
     public function create()
     {
         $message = session('message');
-        return view('login.create', compact('message'));
+        $loggedUser = null;
+        $checked = false;
+
+        if (Auth::check()) {
+            return redirect()->route('home');
+        }
+
+        if (!empty(session('loggedUser'))) {
+            $loggedUser = session('loggedUser');
+            $checked = true;
+        }
+        return view('login.create', compact('message', 'loggedUser', 'checked'));
     }
 
     public function store(LoginFormRequest $request): RedirectResponse
@@ -36,6 +47,7 @@ class LoginController extends Controller
     public function logout()
     {
         Auth::logout();
+        session()->remove('userName');
         return redirect()->route('login');
     }
 }
