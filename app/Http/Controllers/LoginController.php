@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\LoginFormRequest;
 use App\Http\Service\LoginService;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -30,5 +31,11 @@ class LoginController extends Controller
             return redirect()->route('login');
         }
         return redirect()->route('home');
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 }
