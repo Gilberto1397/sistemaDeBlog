@@ -10,16 +10,26 @@
                         <a class="nav-link" aria-current="page" href="{{route('login')}}">Login</a>
                     </li>
                 @endguest
-                @auth()
-                    <form method="post" action="{{route('logout')}}">
-                        @csrf
-                        @method('DELETE')
-                        <li class="nav-item">
-                            <button type="submit" class="nav-link">Logout</button>
-                        </li>
-                    </form>
-                @endauth
             </ul>
         </div>
+
+        @auth()
+            <div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{session('userName')}}
+                    </button>
+                    <ul class="dropdown-menu" style="left: -75px">
+                        <form method="post" action="{{route('logout')}}">
+                            @csrf
+                            @method('DELETE')
+                            <li>
+                                <button type="submit" class="dropdown-item">Logout</button>
+                            </li>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        @endauth
     </div>
 </nav>
