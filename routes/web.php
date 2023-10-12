@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Route::get('/login', [LoginController::class, 'create'])->name('login');
 Route::post('/login', [LoginController::class, 'store'])->name('login-post');
+Route::delete('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/novo/usuario', [UserController::class, 'create'])->name('new-user-get');
 Route::post('/novo/usuario', [UserController::class, 'store'])->name('new-user-post');

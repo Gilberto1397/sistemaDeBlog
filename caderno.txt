@@ -4,3 +4,5 @@ Login automático após criação de usuário, não implementado
 arrumar mensagem de usuário incorreto
 implementar o lembrar-me
 implementar validação de tentar ir pra login se já está logado e tentar ir para a home sem estar logado
+
+Implementar o nome do usuário na navbar ao se logar
