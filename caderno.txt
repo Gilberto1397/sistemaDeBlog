@@ -1,13 +1,16 @@
-implementar o lembrar-me - ok
-implementar validação de tentar ir pra login se já está logado e tentar ir para a home sem estar logado -ok
+Imagem não será obrigatória mas terá default
+
+implementar o old na criação de usuários
 
 
-Implementar o nome do usuário na navbar ao se logar
+>>>>>>>>>>> RELER OS CONTEUDOS USADOS NESSE PROJETO PRINCIPALMENTE A PARTE DE UPLOAD DE ARQUIVO
+    TROCAR O NOME DAS COLUNAS DE POST NECESSÁRIAS
 
+
+    https://g.co/bard/share/2b33c026b181 - usando sanitize no formRequest
 
 
 Coisas não implementadas:
-
     Não será implementada validação de senha do usuário verificando símbolos ou letras maiusculas e minusculas
 
     Login automático após criação de usuário, não implementado
