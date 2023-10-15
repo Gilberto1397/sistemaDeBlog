@@ -1,5 +1,13 @@
-Iniciar salvando a imagem como binário
-Talvez implementar imagem default
+Imagem não será obrigatória mas terá default
+
+implementar o old na criação de usuários
+
+
+>>>>>>>>>>> RELER OS CONTEUDOS USADOS NESSE PROJETO PRINCIPALMENTE A PARTE DE UPLOAD DE ARQUIVO
+    TROCAR O NOME DAS COLUNAS DE POST NECESSÁRIAS
+
+
+    https://g.co/bard/share/2b33c026b181 - usando sanitize no formRequest
 
 
 Coisas não implementadas:

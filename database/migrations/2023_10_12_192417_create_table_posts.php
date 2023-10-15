@@ -17,9 +17,10 @@ class CreateTablePosts extends Migration
             $table->id();
             $table->unsignedBigInteger('users_id');
             $table->string('title');
-            $table->string('content');
-            $table->binary('image');
-            $table->timestamp('created');
+            $table->string('postContent');
+            $table->string('imagePath')->nullable();
+            $table->date('createdDate');
+            $table->time('createdTime');
 
             $table->foreign('users_id')->references('id')->on('users');
         });

@@ -20,6 +20,7 @@ Route::middleware(['auth'])->group(function () {
     Route::controller(PostController::class)->group(function () {
         Route::get('/', 'index')->name('home');
         Route::get('/novo/post', 'create')->name('newPost-get');
+        Route::post('/novo/post', 'store')->name('newPost-post');
     });
 });
 
