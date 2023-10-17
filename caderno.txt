@@ -4,7 +4,7 @@ implementar unique nos validade de email no userFormRequest e exists no userId n
 
 colocar nome do autor, data e o conteúdo no post
 
-implementar uma rota de show nos cards
+implementar uma rota de show nos cards para colocar comentários
 
 implementar repository de post
 

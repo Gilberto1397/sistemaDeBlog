@@ -21,6 +21,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/', 'index')->name('home');
         Route::get('/novo/post', 'create')->name('newPost-get');
         Route::post('/novo/post', 'store')->name('newPost-post');
+        Route::get('/atualiza/post/{post}', 'edit')->name('post-edit');
+        Route::put('/atualiza/post/{post}', 'update')->name('post-update');
+        Route::delete('/atualiza/post/{post}', 'destroy')->name('post-destroy');
     });
 });
 

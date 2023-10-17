@@ -1,19 +1,28 @@
 @extends('components.main-layout')
 
-@section('title', 'Novo post+')
+@if(empty($post->id))
+    @section('title', 'Novo post+')
+@else
+    @section('title', 'Editar post')
+@endif
 
 @section('content')
 
     <section class="d-flex justify-content-center mt-5 text-white">
         <div class="w-75">
             <form method="post" enctype="multipart/form-data">
+                @if(!empty($post->id))
+                    @method('PUT')
+                    <input name="postId" type="hidden" value="{{$post->id}}">
+                @endif
+
                 @csrf
 
                 <input name="userId" type="hidden" value="{{$userId}}">
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Título</label>
-                    <input type="title" name="title" value="{{old('title')}}" class="form-control" placeholder="Título" id="title" aria-describedby="titleHelp" required>
+                    <input type="title" name="title" value="{{old('title') ?? $post->title}}" class="form-control" placeholder="Título" id="title" aria-describedby="titleHelp" required>
                     @if($errors->has('title'))
                         @foreach($errors->get('title') as $error)
                             <p class="text-white">{{ "$error \n" }}</p>
@@ -23,7 +32,7 @@
 
                 <div class="mb-3">
                     <label for="post" class="form-label">Postagem</label>
-                    <textarea name="postContent" class="form-control" id="post" placeholder="Escreva seu post aqui" style="height: 100px" required>{{old('postContent')}}</textarea>
+                    <textarea name="postContent" class="form-control" id="post" placeholder="Escreva seu post aqui" style="height: 100px" required>{{old('postContent') ?? $post->postContent}}</textarea>
                     @if($errors->has('postContent'))
                         @foreach($errors->get('postContent') as $error)
                             <p class="text-white">{{ "$error \n" }}</p>
@@ -40,6 +49,8 @@
                         @endforeach
                     @endif
                 </div>
+
+                <img src="{{asset('storage/' . $post->imagePath)}}" class="h-50 w-50">
 
                 <button type="submit" class="btn btn-primary">Salvar</button>
             </form>
