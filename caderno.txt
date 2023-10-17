@@ -1,6 +1,12 @@
 Imagem não será obrigatória mas terá default
 
-implementar o old na criação de usuários
+implementar unique nos validade de email no userFormRequest e exists no userId no validade de posts
+
+colocar nome do autor, data e o conteúdo no post
+
+implementar uma rota de show nos cards
+
+implementar repository de post
 
 
 >>>>>>>>>>> RELER OS CONTEUDOS USADOS NESSE PROJETO PRINCIPALMENTE A PARTE DE UPLOAD DE ARQUIVO
