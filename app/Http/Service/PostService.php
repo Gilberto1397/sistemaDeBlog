@@ -2,11 +2,21 @@
 
 namespace App\Http\Service;
 
+use App\Http\Repository\Post\PostRepositoryInterface;
+use App\Http\Repository\User\EloquentUserRepository;
 use App\Http\Requests\PostFormRequest;
 use App\Models\Post;
 
 class PostService
 {
+    private PostRepositoryInterface $postRepository;
+
+    public function __construct(PostRepositoryInterface $postRepository)
+    {
+        $this->postRepository = $postRepository;
+    }
+
+
     public function index()
     {
         return Post::all();
@@ -14,23 +24,12 @@ class PostService
 
     public function store(PostFormRequest $request)
     {
-        $post = new Post();
-        $post->title = $request->title;
-        $post->users_id = $request->userId;
-        $post->postContent = $request->postContent;
-        $post->createdDate = Date('Y-m-d');
-        $post->createdTime = Date('H:i:s');
-        $post->imagePath = 'postImages/imageDefault.jpg';
-
-        if (!empty($request->file('image'))
-            && $request->file('image')->getError() === UPLOAD_ERR_OK
-            && str_starts_with($request->file('image')->getMimeType(), 'image/')) {
-
-            $imagePath = $request->file('image')->store('postImages', 'public');
-            $post->imagePath = $imagePath;
-        }
-        $post->save();
-
+        $this->postRepository->store($request);
         return;
+    }
+
+    public function update(PostFormRequest $request, Post $post)
+    {
+        return $this->postRepository->update($request, $post);
     }
 }

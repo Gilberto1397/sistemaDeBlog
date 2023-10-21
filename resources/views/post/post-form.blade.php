@@ -11,6 +11,13 @@
     <section class="d-flex justify-content-center mt-5 text-white">
         <div class="w-75">
             <form method="post" enctype="multipart/form-data">
+
+                @if($errors->has('userId'))
+                    @foreach($errors->get('userId') as $error)
+                        {{ "$error \n" }}
+                    @endforeach
+                @endif
+
                 @if(!empty($post->id))
                     @method('PUT')
                     <input name="postId" type="hidden" value="{{$post->id}}">

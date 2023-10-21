@@ -26,7 +26,8 @@ class PostFormRequest extends FormRequest
         return [
             'title' => 'required|string',
             'postContent' => 'required|string',
-            'image' => 'filled|image'
+            'image' => 'filled|image',
+            'userId' => 'required|integer|exists:users,id'
         ];
     }
 
@@ -38,7 +39,10 @@ class PostFormRequest extends FormRequest
             'content.required' => 'O conteúdo do post é obrigatório!',
             'content.string' => 'O conteúdo do post deve ser um texto!',
             'image.required' => 'O arquivo escolhido parece estar vazio!',
-            'image.image' => 'O arquivo escolhido deve ser uma imagem!'
+            'image.image' => 'O arquivo escolhido deve ser uma imagem!',
+            'userId.exists' => 'Seu usuário é inválido!',
+            'userId.integer' => 'Seu usuário é inválido!',
+            'userId.required' => 'Seu usuário é inválido!'
         ];
     }
 }

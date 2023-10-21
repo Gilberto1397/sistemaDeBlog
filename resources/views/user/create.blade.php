@@ -19,7 +19,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label">Senha</label>
-                    <input type="password" name="password" {{old('password')}} class="form-control" id="password" required>
+                    <input type="password" name="password" class="form-control" id="password" required>
                     @if($errors->has('password'))
                         @foreach($errors->get('password') as $error)
                             {{ "$error \n" }}
@@ -28,7 +28,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="user" class="form-label">Usuário</label>
-                    <input type="user" name="user" {{old('user')}} class="form-control" id="user" required>
+                    <input type="user" name="user" value="{{old('user')}}" class="form-control" id="user" required>
                     @if($errors->has('user'))
                         @foreach($errors->get('user') as $error)
                             {{ "$error \n" }}

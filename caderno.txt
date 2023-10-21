@@ -1,11 +1,7 @@
-implementar unique nos validade de email no userFormRequest e exists no userId no validade de posts
-
-colocar nome do autor, data e o conteúdo no post na home
-
-implementar repository de post
-
 NÃO MOSTRAR BOTÕES DE EDIÇÃO E EXCLUSÃO SE O POST NÃO FOR DO USUÁRIO LOGADO E SE TENTEAR ACESSAR VIA URL VERIFICAR O ID DO USUÁRIO LOGADO COM O DO SALVO NO POST
 SE Não FOR, ENCAMINHAR PARA O SHOW DO RESPECTIVO POST
+
+tentar implementar o workflow de laravel do git
 
 
 >>>>>>>>>>> RELER OS CONTEUDOS USADOS NESSE PROJETO PRINCIPALMENTE A PARTE DE UPLOAD DE ARQUIVO
