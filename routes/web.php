@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
@@ -24,6 +25,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/atualiza/post/{post}', 'edit')->name('post-edit');
         Route::put('/atualiza/post/{post}', 'update')->name('post-update');
         Route::delete('/atualiza/post/{post}', 'destroy')->name('post-destroy');
+        Route::get('/exibir/post/{post}', 'show')->name('post-show');
+    });
+
+    Route::controller(CommentController::class)->group(function () {
+        Route::post('/exibir/post/{post}', 'store')->name('comment-post');
     });
 });
 

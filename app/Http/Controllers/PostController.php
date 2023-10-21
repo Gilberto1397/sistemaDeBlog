@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CommentFormRequest;
 use App\Http\Requests\PostFormRequest;
 use App\Http\Service\PostService;
 use App\Models\Post;
@@ -22,7 +23,6 @@ class PostController extends Controller
     {
         $message = !empty(session('message')) ? session('message') : null;
         $posts = $this->postService->index();
-        //dd($posts);
         return view('post.index', compact('message', 'posts'));
     }
 
@@ -36,6 +36,12 @@ class PostController extends Controller
     {
         $this->postService->store($request);
         return redirect()->route('home')->with('message', 'Post criado com sucesso!');
+    }
+
+    public function show(Post $post)
+    {
+        $comments = $post->comments;
+        return view('post.show', compact('post', 'comments'));
     }
 
     public function edit(Post $post)
