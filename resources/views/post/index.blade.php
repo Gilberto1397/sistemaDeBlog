@@ -4,7 +4,7 @@
 
     <div class="d-flex column-gap-5">
         @foreach($posts as $post)
-            <div class="card" style="width: 18rem;">
+            <div class="card w-25" style="width: 18rem;">
                 <img src="{{asset('storage/' . $post->imagePath)}}" class="card-img-top" alt="...">
 
                 <div class="card-body">
@@ -20,7 +20,10 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-primary">&#128465; Excluir</button>
                         </form>
+
+                        <a href="{{route('post-show', ['post' => $post->id])}}" class="btn btn-primary">&#9689; Comentar</a>
                     </div>
+
                 </div>
             </div>
         @endforeach
