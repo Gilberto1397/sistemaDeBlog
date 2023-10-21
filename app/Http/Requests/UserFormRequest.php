@@ -25,7 +25,7 @@ class UserFormRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|string|email',
+            'email' => 'required|string|email|unique:users,email',
             'user' => 'required|string',
             'password' => 'required|string|min:8'
         ];
@@ -41,6 +41,7 @@ class UserFormRequest extends FormRequest
         return [
             'email.required' => 'Você precisa informar o campo "E-mail"!',
             'email.string' => 'O valor inserido no campo "E-mail" é inválido!',
+            'email.unique' => 'Esse email encontra-se em uso!',
             'user.required' => 'Você precisa informar o campo "Usuário"!',
             'user.string' => 'O valor inserido no campo "Usuário" é inválido!',
             'password.required' => 'Você precisa informar o campo "Senha"!',
