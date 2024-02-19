@@ -9,3 +9,11 @@ Coisas não implementadas:
     Não será implementada validação de senha do usuário verificando símbolos ou letras maiusculas e minusculas
 
     Login automático após criação de usuário, não implementado
+
+
+
+USAR O REMEMBER_TOKEN DO PRÓPRIO LARAVEL
+
+BUG ONDE CASO FECHE NA TELA DE CRIAR SENHA, NÃO IRÁ VOLTAR, TEM Q VALIDAR SE O EMAIL EXISTE E SE TEM SENHA
+
+quando ver sobre excessão melhorar as validações
