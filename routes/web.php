@@ -3,8 +3,10 @@
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SocialiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use Laravel\Socialite\Facades\Socialite;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +39,12 @@ Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'create')->name('login');
     Route::post('/login', 'store')->name('login-post');
     Route::delete('/logout', 'logout')->name('logout');
+
+    Route::get('/senha/recuperar', 'forgotPassword')->name('password.request');
+    Route::post('/senha/recuperar', 'passwordRecover')->name('password.email');
+
+    Route::get('/senha/regerar/{token}', 'passwordReset')->name('password.reset');
+    Route::post('/senha/regerar', 'passwordRegenerate')->name('password.update');
 });
 
 Route::controller(UserController::class)->group(function () {
@@ -44,4 +52,8 @@ Route::controller(UserController::class)->group(function () {
     Route::post('/novo/usuario', 'store')->name('new-user-post');
 });
 
+Route::get('/auth/redirect', function () {
+    return Socialite::driver('google')->redirect();
+})->name('authGoogle');
 
+Route::get('/auth/callback', [SocialiteController::class, 'store']);
